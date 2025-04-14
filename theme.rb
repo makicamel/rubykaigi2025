@@ -106,7 +106,7 @@ match(TitleSlide, '*') do |elems|
 end
 
 match(Slide, HeadLine) do |heads|
-  heads.margin_top = 4
+  heads.margin_top = 12
   heads.padding_bottom = 20
   heads.prop_set('size', @x_large_font_size)
   heads.prop_set('weight', 'SemiBold')

@@ -17,6 +17,7 @@
   * @makicamel / 川原万季
   * Ruby 💎 とビール 🍻 とお酒が好き
   * ㈱アンドパッド
+  * "Road to RubyKaigi" の作者
 
   # image
   # src = image/makicamel.png
@@ -25,3 +26,554 @@
   # vertical_align = top
   # relative_margin_right = 0
   # relative_margin_top = 0
+
+= Road to RubyKaigi
+　
+  # image
+  # src = image/road_to_rubykaigi-github.png
+  # relative_height = 100
+  # align = center
+  # vertical_align = top
+  # relative_margin_right = 0
+  # relative_margin_top = -8
+
+(('tag:xx-small:　　Road to RubyKaigi　'))((<URL:https://github.com/makicamel/road_to_rubykaigi>))
+
+= Road to RubyKaigi
+
+  * Rubyist による Rubyist のための Ruby 製のゲーム
+  * ターミナル上で遊ぶ横スクロールアクションゲーム
+  * バグを倒し〆切から逃れて RubyKaigi 参加を目指す
+  * `gem install road_to_rubykaigi`
+
+= Road to RubyKaigi
+
+  * プレイ動画
+
+  # image
+  # src = image/play-video.gif
+  # relative_height = 100
+  # align = center
+  # vertical_align = middle
+
+= Road to RubyKaigi
+
+  * なにかが足りない
+  * (('wait'))音楽!
+
+= 音
+
+  * 音声ファイル形式
+    * WAWV, MP3, MIDI, etc ...
+  * ゲーム音楽といえば MIDI((-現代ではハードが潤沢になったため WAV や MP3 が使われるケースも多い-))
+\n\n\n\n\n
+
+= 音
+
+  * MIDI
+    * ハードの音源を鳴らす命令のみを持つ
+    * 音源は持たない
+    * ファイルサイズが小さい
+  * (('wait'))macOS には標準で有効な MIDI 音源がない
+    * ユーザーがシステム設定を行う必要がある
+    * ふべん
+
+= ここで一句
+　
+= ここで一句
+
+  # image
+  # src = image/haiku.png
+  # relative_height = 92
+  # align = center
+  # vertical_align = middle
+
+= 音楽を作る
+
+  * 音とは波
+
+== プロパティ
+
+: background-image
+   image/waveform-example.png
+: background-image-relative-width
+   90
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   40
+
+= 音楽を作る
+
+  * 音源とは波を作るもの
+    * Ruby でつくれる
+
+== プロパティ
+
+: background-image
+   image/waveform-example.png
+: background-image-relative-width
+   90
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   40
+
+= 音楽を作る
+
+  * 作った波を出力する装置
+    * オーディオデバイス
+      * e.g. スピーカー、ヘッドホン
+
+= 音楽を作る
+
+  * オーディオデバイスの入出力 API
+    * macOS
+      * Core Audio
+    * Windows
+      * Windows Audio Session API
+    * Linux
+      * Advanced Linux Sound Architecture
+
+  # image
+  # src = image/fukidashi-multi-platforms.png
+  # relative_width = 30
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   9
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= 音楽を作る
+
+* クロスプラットフォームオーディオ入出力 API 提供ライブラリ
+  * PortAudio ((<URL:https://github.com/PortAudio/portaudio>))
+* (('wait'))PortAudio の Ruby バインディング
+  * ffi-portaudio ((<URL:https://github.com/nanki/ffi-portaudio>))
+
+= 音楽を作る
+
+  (1) 波（音データ）をつくる
+  (2) ffi-portaudio に渡す
+      * PortAudio 経由でオーディオデバイスに出力する
+  (3) Ruby で音を鳴らせる!
+
+  # image
+  # src = image/fukidashi-music.png
+  # relative_width = 30
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   9
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= 　
+　
+== プロパティ
+
+: background-image
+   image/wave.jpg
+: background-image-relative-width
+   100
+: background-image-align
+   center
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-top
+   6
+
+= 波のつくり方: 基本
+
+  * "音とは波"
+    * とは？
+
+= 波のつくり方: 基本
+
+  * 代表的な波形
+    * サイン波
+    * 矩形波
+    * 三角波
+    * ノコギリ波
+
+\n\n\n
+(('tag:xx-small:　　Square wave (waveform)　'))((<URL:https://en.wikipedia.org/wiki/Square_wave_(waveform)>))
+
+== プロパティ
+
+: background-image
+   image/waveforms-wiki.png
+: background-image-relative-height
+   68
+: background-image-align
+   right
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-right
+   6
+
+= 波のつくり方: 基本
+
+  * 周期性を持つ
+    * 信号の強さの変化に\nパターンがある
+  * 周波数
+    * 1 秒間に周期を繰り返す回数
+      * e.g. 444.0Hz の場合
+        * 毎秒 440 周期を繰り返す
+
+  # image
+  # src = image/waveforms-wiki-cycle.png
+  # relative_height = 84
+  # align = right
+  # vertical_align = top
+  # relative_margin_right = 42
+  # relative_padding_top = -4
+
+\n
+(('tag:xx-small:　　Square wave (waveform)　'))((<URL:https://en.wikipedia.org/wiki/Square_wave_(waveform)>))
+
+== プロパティ
+
+: background-image
+   image/waveforms-wiki.png
+: background-image-relative-height
+   68
+: background-image-align
+   right
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-right
+   6
+
+= 波のつくり方: 基本
+
+  * 周期
+    * 1 周期にかかる時間
+      * 1 / 周波数
+      * e.g. 440.0Hz の周期
+        * 0.0022727272727272726 秒
+      * e.g. 1046.50 Hz の周期
+        * 0.0009555661729574773 秒
+
+  # image
+  # src = image/fukidashi-frequency.png
+  # relative_width = 30
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   9
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= 波のつくり方: 基本
+
+  * アナログ
+    * 周期の中で信号の強さが連続して変化する
+  * デジタル
+    * 連続した信号の強さの記録はできない
+    * 連続して見えるよう規定回数記録する
+      * この規定回数が「サンプルレート」
+    * サンプルレート
+      * 1 秒間に取得するサンプル数
+
+== プロパティ
+
+: background-image
+   image/waveform-dac.png
+: background-image-relative-width
+   50
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   2
+: background-image-relative-padding-bottom
+   4
+
+= 波のつくり方: 基本
+
+  * 信号の変化を集めて繰り返すだけ
+
+= 　
+　
+== プロパティ
+
+: background-image
+   image/wave2.jpg
+: background-image-relative-width
+   100
+: background-image-align
+   center
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-top
+   10
+
+= 波のつくり方: 実践
+
+  * ファミコンのようなピコピコ音を鳴らしたい
+  * ファミコンで生成される波形
+    * 矩形波
+    * 三角波
+  * 今回は矩形波をピックアップ
+
+= 矩形波
+
+  * 1 と -1 の 2 値
+  * いわゆるピコピコ音
+
+== プロパティ
+
+: background-image
+   image/waveform-square.png
+: background-image-relative-width
+   68
+: background-image-align
+   center
+: background-image-vertical-align
+   middle
+: background-image-relative-margin-top
+   10
+
+= 矩形波
+
+  * 周期前半が 1、後半が -1
+
+  # image
+  # src = image/fukidashi-easy.png
+  # relative_width = 30
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   9
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= 矩形波
+
+  * 周期
+    * 周波数: 1 秒に周期を繰り返す回数
+    * サンプルあたりの時間: 1 秒 / サンプルレート
+    * サンプルあたり現在位置の増分: 周波数 / サンプルレート
+
+  # rouge ruby
+    class SquareOscillator
+      def tick(frequency:)
+          @phase += frequency.to_f / sample_rate
+          @phase -= 1.0 if @phase >= 1.0 # 周期は0〜1なので1に到達したら-1する
+          @phase
+      end
+
+= 矩形波
+
+  * 波形生成
+
+  # rouge ruby
+    class SquareOscillator
+        # ...
+        def generate(frequency:)
+            # 周期の中の現在地を取得
+            phase = tick(frequency: frequency)
+            # 周期前半なら1、後半なら-1を返す
+            phase < 0.5 ? 1.0 : -1.0
+        end
+    end
+
+    # サンプルを集めると矩形波ができる
+    samples = (0...frames).map { oscillator.generate(frequency:) }
+
+= 矩形波
+
+  * PortAudioに渡す
+
+      # rouge ruby
+      class AudioEngine < FFI::PortAudio::Stream
+          def process(_input, output, framesPerBuffer, _timeInfo, _statusFlags, _userData)
+              samples = (0...framesPerBuffer).map { @oscillator.generate(frequency:) }
+              output.write_array_of_float(samples)
+              :paContinue
+          end
+      # ...
+  * (('wait'))音が鳴った 🎉
+
+= 矩形波
+　
+  * オーディオデバイスから出力される波形
+
+  # image
+  # src = image/waveform-square-1.png
+  # relative_width = 80
+  # align = right
+  # vertical_align = middle
+
+= 矩形波
+　
+  * オーディオデバイスから出力される波形
+
+  # image
+  # src = image/waveform-square-2.png
+  # relative_width = 80
+  # align = right
+  # vertical_align = middle
+
+= 矩形波
+　
+  # image
+  # src = image/fukidashi-noise.png
+  # relative_width = 40
+  # align = right
+  # vertical_align = bottom
+  # relative_margin_top = 12
+
+== プロパティ
+
+: background-image
+   image/makicamel.png
+: background-image-relative-width
+   9
+: background-image-align
+   right
+: background-image-vertical-align
+   bottom
+: background-image-relative-margin-right
+   6
+
+= 矩形波
+
+  * 急激に信号の強さを切り替えるとノイズが生まれる
+    * 多くの高周波成分が生まれる
+    * デジタル → アナログの変換
+
+= 矩形波
+
+  * ノイズ除去
+    * 角丸にする
+\n\n\n\n\n\n\n
+(('tag:xx-small:　　急激な信号の変化によるノイズ除去にはローパスフィルタが効果的ですが'))\n
+(('tag:xx-small:　　今回はピコピコ音にしたいので採用しません'))
+
+= 矩形波
+
+  * 周期の現在位置が角の場合、信号の強さに重みをつける
+
+  # image
+  # src = image/waveform-square-2.png
+  # relative_width = 80
+  # align = right
+  # vertical_align = middle
+
+= 矩形波
+
+    * 周期の現在位置が角の付近の場合、信号の強さに重みをつける
+      * 正規化した周期の現在位置をコサイン関数に渡して重みをつくる
+
+    # rouge ruby
+    class RoundedSquareOscillator
+        def generate(frequency:)
+            phase = tick(frequency: frequency)
+            off_to_on_end = SMOOTH_WIDTH / 2.0
+            on_to_off_start = duty_cycle - SMOOTH_WIDTH / 2.0
+            on_to_off_end = duty_cycle + SMOOTH_WIDTH / 2.0
+
+            case phase
+            when 0..off_to_on_end
+              t = phase / off_to_on_end
+              cos_weight = 1 - Math.cos(Math::PI * t)
+              -1.0 + cos_weight * 2
+            when off_to_on_end..on_to_off_start
+              1.0
+            # ...
+
+= 矩形波
+
+  * きれいになった 🙌
+
+  # image
+  # src = image/waveform-square-4.png
+  # relative_height = 96
+  # align = center
+  # vertical_align = middle
+
+= 音楽を鳴らす
+
+  * あとは譜面を書いて
+
+== プロパティ
+
+: background-image
+   image/score.png
+: background-image-relative-height
+   92
+: background-image-align
+   center
+: background-image-vertical-align
+   top
+: background-image-relative-margin-top
+   32
+
+= 音楽を鳴らす
+
+  * いろいろ組み合わせて
+    * 三角波
+      * 擬似三角波
+    * エンベロープ
+    * 効果音
+
+= 音楽を鳴らす
+
+  * PortAudio に渡すだけ
+
+      # rouge ruby
+      class AudioEngine < FFI::PortAudio::Stream
+          def process(_input, output, framesPerBuffer, _timeInfo, _statusFlags, _userData)
+              samples = (0...framesPerBuffer).map { @oscillator.generate(frequency:) }
+              output.write_array_of_float(samples)
+              :paContinue
+          end
+      # ...
+
+= デモ 🔈
+
+= Enjoy Creating!
