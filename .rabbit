@@ -2,3 +2,4 @@
 --paper-size=1600,900
 --output-filename=making-tinny-chiptunes-with-ruby.pdf
 --output-druby-uri
+--allotted-time=5m
