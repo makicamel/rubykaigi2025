@@ -485,7 +485,7 @@
 
 = Advanced Creating Waves
 
-  * When the current position in the cycle is at a sharp corner\napply weight to the signal's strength
+  * When the current position in the cycle is at a sharp corner\nadd weight to the signal's strength
 
 == プロパティ
 
@@ -502,7 +502,7 @@
 
 = Advanced Creating Waves
 
-  * When the current position in the cycle is at a sharp corner\napply weight to the signal's strength
+  * When the current position in the cycle is at a sharp corner\nadd weight to the signal's strength
     * Use the cosine function to draw curves like
 
 == プロパティ
