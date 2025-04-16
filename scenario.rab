@@ -312,7 +312,7 @@
 = Basics of Creating Waves
 
   * How to generate waves
-    * Just collect the changes in the signal and repeats them
+    * Just collect the changes in the signal and repeat them
 
 = 　
 　
@@ -469,13 +469,13 @@
 : background-image-relative-margin-right
    6
 
-= Advanced Creating Waves
+= Creating Waves Advanced
 
   * Changing the signal strength abruptly generates noise
     * Many high-frequency components are produced
     * Digital-to-analog conversion
 
-= Advanced Creating Waves
+= Creating Waves Advanced
 
   * Noise reduction
     * Smoothing the corners
@@ -483,9 +483,9 @@
 (('tag:xx-small:　　To reduce noise caused by abrupt signal changes, a filter is effective'))\n
 (('tag:xx-small:　　but since we want "pico-pico" sound, not adopt in this talk'))
 
-= Advanced Creating Waves
+= Creating Waves Advanced
 
-  * When the current position in the cycle is at a sharp corner\nadd weight to the signal's strength
+  * When the current position in the cycle is at a sharp corner\nadd offset to the signal's strength
 
 == プロパティ
 
@@ -500,9 +500,9 @@
 : background-image-relative-margin-top
    12
 
-= Advanced Creating Waves
+= Creating Waves Advanced
 
-  * When the current position in the cycle is at a sharp corner\nadd weight to the signal's strength
+  * When the current position in the cycle is at a sharp corner\nadd offset to the signal's strength
     * Use the cosine function to draw curves like
 
 == プロパティ
@@ -518,7 +518,7 @@
 : background-image-relative-margin-top
    12
 
-= Advanced Creating Waves
+= Creating Waves Advanced
 
   * The waveform becomes clean 🙌
 
