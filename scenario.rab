@@ -61,6 +61,14 @@
   * Something is missing...
   * (('wait')) Music!
 
+= 4 sound tracks!
+　
+  # image
+  # src = image/soundperformers.png
+  # relative_height = 100
+  # align = center
+  # vertical_align = middle
+
 = Music
 
   * macOS does not have a built-in active sound source by default
@@ -319,15 +327,15 @@
 == プロパティ
 
 : background-image
-   image/wave2.jpg
+   image/wave-kenmin.jpg
 : background-image-relative-width
-   100
+   120
 : background-image-align
    center
 : background-image-vertical-align
-   bottom
+   top
 : background-image-relative-margin-top
-   10
+   -34
 
 = Practical Approach to Creating Waves
 
